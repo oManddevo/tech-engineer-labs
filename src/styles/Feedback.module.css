@@ -1,0 +1,100 @@
+.feedbackSection {
+  color: #fff;
+  background-color: #0000;
+  width: 100%;
+  padding: clamp(4rem, 8vh, 6rem) 0 clamp(5rem, 10vh, 7rem);
+  position: relative;
+  overflow-x: hidden;
+}
+.highlightGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  display: grid;
+}
+@media (width<=1100px) {
+  .highlightGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (width<=640px) {
+  .highlightGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.highlight {
+  text-align: center;
+  background: #0f172ab8;
+  border: 1px solid #94a3b82e;
+  border-radius: 18px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 12px 32px #02061773;
+}
+.highlightValue {
+  letter-spacing: -0.03em;
+  background: linear-gradient(90deg, #c4b5fd, #7dd3fc);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 0 0 0.5rem;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.highlightLabel {
+  color: #cbd5e1;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.testimonialGrid {
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  display: grid;
+}
+.testimonial {
+  background: #0f172ab8;
+  border: 1px solid #94a3b82e;
+  border-radius: 18px;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  box-shadow: 0 12px 32px #02061773;
+}
+.quoteIcon {
+  color: #7dd3fc;
+}
+.quote {
+  color: #e2e8f0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.author {
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: auto;
+  display: flex;
+}
+.authorName {
+  color: #f8fafc;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.authorRole {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+.devHint {
+  text-align: center;
+  color: #64748b;
+  margin: 1.5rem auto 0;
+  font-size: 0.8rem;
+}
+.devHint a {
+  color: #7dd3fc;
+  text-decoration: underline;
+}

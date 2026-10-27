@@ -1,0 +1,283 @@
+{
+  "contact": {
+    "email": "jamesstearns917@gmail.com",
+    "whatsapp": "+19414170729",
+    "linkedin": "https://www.linkedin.com/in/james-s-760a10230/",
+    "github": "https://github.com/newsfriend"
+  },
+  "hero": {
+    "title": "Senior AI Full Stack Engineer",
+    "specialties": [
+      "Healthcare & E-commerce",
+      "LLM Integration",
+      "Python & TypeScript"
+    ],
+    "headline": "AI systems. Scalable products. Real impact.",
+    "subtitle": "11+ years building production web applications with AI integrations. Specializing in Python, React, Next.js, and LLM-powered features."
+  },
+  "summary": [
+    "AI-native Senior Full Stack Engineer with 11+ years building LLM-powered products, HIPAA-compliant healthcare platforms, and high-traffic e-commerce systems at Airbnb, Trinity Health, and Amazon.",
+    "Ships end-to-end features across Python/FastAPI, TypeScript/Node.js, and React/Next.js, with production experience in RAG pipelines, AI agents, HL7 FHIR/EHR integration, PHI security, and AWS/Kubernetes infrastructure. Works at startup speed on 0-to-1 products and uses AI coding tools such as Claude Code daily to deliver faster without trading off reliability."
+  ],
+  "skills": {
+    "lead": "My core stack across AI, full-stack development, Whop monetization, workflow automation, and Android security.",
+    "groups": [
+      {
+        "title": "AI / LLM",
+        "accent": "purple",
+        "proficiency": 90,
+        "icon": "Cpu",
+        "summary": "Production AI systems with OpenAI and Anthropic—agents, RAG pipelines, and LLM features wired into real products and APIs.",
+        "skills": [
+          {
+            "name": "OpenAI",
+            "level": 5,
+            "icon": "Sparkles"
+          },
+          {
+            "name": "Anthropic",
+            "level": 5,
+            "icon": "MessageSquare"
+          },
+          {
+            "name": "AI Agents",
+            "level": 5,
+            "icon": "Bot"
+          },
+          {
+            "name": "RAG Systems",
+            "level": 4,
+            "icon": "Network"
+          },
+          {
+            "name": "LLM Integrations",
+            "level": 5,
+            "icon": "Link2"
+          },
+          {
+            "name": "Prompt Engineering",
+            "level": 5,
+            "icon": "FileCode"
+          }
+        ]
+      },
+      {
+        "title": "Languages & Backend",
+        "accent": "orange",
+        "proficiency": 88,
+        "icon": "Server",
+        "summary": "High-performance backends and automation services in Python and Golang—APIs, bots, scraping, and scalable system design.",
+        "skills": [
+          {
+            "name": "Python",
+            "level": 5,
+            "icon": "FileCode"
+          },
+          {
+            "name": "Golang",
+            "level": 5,
+            "icon": "Server"
+          },
+          {
+            "name": "REST APIs",
+            "level": 5,
+            "icon": "Network"
+          },
+          {
+            "name": "Bot Systems",
+            "level": 5,
+            "icon": "Bot"
+          },
+          {
+            "name": "Web Scraping",
+            "level": 5,
+            "icon": "Globe"
+          },
+          {
+            "name": "Reverse Engineering",
+            "level": 5,
+            "icon": "Lock"
+          }
+        ]
+      },
+      {
+        "title": "Frontend & Mobile",
+        "accent": "cyan",
+        "proficiency": 85,
+        "icon": "Code2",
+        "summary": "Modern web and mobile experiences with React, Next.js, and React Native—fast UIs, SSR, and production-ready product surfaces.",
+        "skills": [
+          {
+            "name": "React (Next.js)",
+            "level": 5,
+            "icon": "Code2"
+          },
+          {
+            "name": "React Native",
+            "level": 4,
+            "icon": "Smartphone"
+          },
+          {
+            "name": "TypeScript",
+            "level": 4,
+            "icon": "FileCode"
+          },
+          {
+            "name": "SSR & Routing",
+            "level": 4,
+            "icon": "Globe"
+          },
+          {
+            "name": "SaaS UI",
+            "level": 5,
+            "icon": "Sparkles"
+          },
+          {
+            "name": "Mobile Apps",
+            "level": 4,
+            "icon": "Smartphone"
+          }
+        ]
+      },
+      {
+        "title": "Whop Platform",
+        "accent": "indigo",
+        "proficiency": 87,
+        "icon": "Zap",
+        "summary": "Building and monetizing products on Whop—payments, auth, webhooks, and real-time features for marketplaces and digital businesses.",
+        "skills": [
+          {
+            "name": "Whop SDK",
+            "level": 5,
+            "icon": "Zap"
+          },
+          {
+            "name": "Payments",
+            "level": 5,
+            "icon": "Link2"
+          },
+          {
+            "name": "Auth Flows",
+            "level": 5,
+            "icon": "Lock"
+          },
+          {
+            "name": "Webhooks",
+            "level": 5,
+            "icon": "Webhook"
+          },
+          {
+            "name": "Real-time",
+            "level": 4,
+            "icon": "Network"
+          },
+          {
+            "name": "Monetization",
+            "level": 5,
+            "icon": "Sparkles"
+          }
+        ]
+      },
+      {
+        "title": "Workflow Automation",
+        "accent": "green",
+        "proficiency": 86,
+        "icon": "Workflow",
+        "summary": "End-to-end workflow orchestration with n8n, Make.com, and Zapier—connecting APIs, CRMs, chat apps, and business automation.",
+        "skills": [
+          {
+            "name": "n8n",
+            "level": 5,
+            "icon": "Workflow"
+          },
+          {
+            "name": "Make.com",
+            "level": 5,
+            "icon": "Network"
+          },
+          {
+            "name": "Zapier",
+            "level": 4,
+            "icon": "Zap"
+          },
+          {
+            "name": "Orchestration",
+            "level": 5,
+            "icon": "Link2"
+          },
+          {
+            "name": "CRM Automation",
+            "level": 4,
+            "icon": "MessageSquare"
+          },
+          {
+            "name": "BPA Systems",
+            "level": 5,
+            "icon": "Webhook"
+          }
+        ]
+      },
+      {
+        "title": "Android & Security",
+        "accent": "rose",
+        "proficiency": 84,
+        "icon": "Shield",
+        "summary": "Android analysis, anti-bot systems, and Play Integrity—low-level debugging and security work across mobile automation ecosystems.",
+        "skills": [
+          {
+            "name": "Play Integrity",
+            "level": 5,
+            "icon": "Shield"
+          },
+          {
+            "name": "Android Analysis",
+            "level": 5,
+            "icon": "Smartphone"
+          },
+          {
+            "name": "Anti-bot",
+            "level": 5,
+            "icon": "Lock"
+          },
+          {
+            "name": "Low-level Debug",
+            "level": 4,
+            "icon": "Terminal"
+          },
+          {
+            "name": "API Integrations",
+            "level": 5,
+            "icon": "Link2"
+          },
+          {
+            "name": "Device Attestation",
+            "level": 4,
+            "icon": "Cpu"
+          }
+        ]
+      }
+    ]
+  },
+  "feedback": {
+    "lead": "Much of my impact comes from the teams I work with: leading pods, mentoring engineers, and turning cross-functional ideas into shipped products.",
+    "highlights": [
+      {
+        "value": "6",
+        "label": "Engineers mentored through 50+ code reviews"
+      },
+      {
+        "value": "3",
+        "label": "Pods led into AI-native development with Claude Code and MCP, raising delivery velocity by 40%"
+      },
+      {
+        "value": "20+",
+        "label": "Hospitals using the platform I built as a founding engineer on a 0-to-1 team"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime kept through architecture RFCs and on-call ownership"
+      }
+    ],
+    "testimonials": []
+  }
+}

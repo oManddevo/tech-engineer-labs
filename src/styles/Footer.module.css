@@ -1,0 +1,74 @@
+.footer {
+  color: #fff;
+  z-index: 10;
+  background-color: #000814;
+  border-top: 1px solid #ffffff1a;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80vh;
+  padding: 10vh 0 5vh;
+  display: flex;
+  position: relative;
+}
+.socialBtn {
+  color: #fff;
+  background-color: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+  display: flex;
+}
+.socialBtn:hover {
+  color: #fff;
+  background-color: #38bdf8;
+  border-color: #38bdf8;
+  transform: scale(1.1);
+}
+.backToTop {
+  color: #000;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  transition:
+    transform 0.3s,
+    background-color 0.3s;
+  display: flex;
+}
+.backToTop:hover {
+  color: #fff;
+  background-color: #38bdf8;
+  transform: scale(1.1);
+}
+
+/* Small screens: stack and center the footer's social row and bottom bar. */
+@media (width<770px) {
+  .footer :global(.flex.gap-4.self-start.md\:self-end.mb-2) {
+    align-self: center !important;
+  }
+
+  .footer > div:nth-of-type(2) > div:first-child {
+    align-items: center !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    justify-content: center !important;
+    padding-top: 4.75rem !important;
+    width: 100%;
+  }
+
+  .footer > div:nth-of-type(2) > div:first-child > div:last-child {
+    align-self: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: fit-content;
+  }
+}
