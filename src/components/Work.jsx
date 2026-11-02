@@ -8,6 +8,7 @@ import styles from "../styles/Work.module.css";
 const INITIAL_COUNT = 15;
 
 function getProjectKind(project) {
+  if (project.nda) return "nda";
   if (project.shareUrl === false) return "private";
   return project.liveUrl ? "live" : "github";
 }
@@ -56,7 +57,7 @@ const Work = ({ standalone = false }) => {
           <div className={styles.projectGrid}>
             {visibleProjects.map((project, i) => {
               const kind = getProjectKind(project);
-              const showLive = kind === "live" && !!project.liveUrl;
+              const showLive = (kind === "live" || kind === "nda") && !!project.liveUrl;
               const showGithub = kind === "github" && hasGithubLink(project);
               const hasActions = showLive || showGithub;
 
@@ -72,19 +73,32 @@ const Work = ({ standalone = false }) => {
                       <span className={styles.sourceBadge} title="Source on GitHub">
                         GitHub
                       </span>
+                    ) : kind === "nda" ? (
+                      <span className={styles.privateBadge} title={`Built at ${project.company} under NDA; code not shared`}>
+                        NDA
+                      </span>
                     ) : (
                       <span className={styles.privateBadge} title="Source not publicly shared">
                         Private
                       </span>
                     )}
-                    <button
-                      className={styles.imageZoomBtn}
-                      onClick={() => setLightbox({ src: project.image, alt: project.name })}
-                      aria-label={`Zoom ${project.name} image`}
-                    >
-                      <img src={project.image} alt={project.name} loading="eager" decoding="async" />
-                    </button>
-                    <div className={styles.cardImageOverlay} aria-hidden="true" />
+                    {project.image ? (
+                      <>
+                        <button
+                          className={styles.imageZoomBtn}
+                          onClick={() => setLightbox({ src: project.image, alt: project.name })}
+                          aria-label={`Zoom ${project.name} image`}
+                        >
+                          <img src={project.image} alt={project.name} loading="eager" decoding="async" />
+                        </button>
+                        <div className={styles.cardImageOverlay} aria-hidden="true" />
+                      </>
+                    ) : (
+                      <div className={styles.cardCover} aria-hidden="true">
+                        <span className={styles.cardCoverCompany}>{project.company}</span>
+                        <span className={styles.cardCoverTitle}>{project.name}</span>
+                      </div>
+                    )}
                   </div>
 
                   <div className={styles.cardBody}>
@@ -118,11 +132,17 @@ const Work = ({ standalone = false }) => {
                               target="_blank"
                               rel="noopener noreferrer"
                               className={styles.cardCtaLive}
-                              aria-label={`Visit ${project.visitShort ?? project.name}`}
+                              aria-label={
+                                kind === "nda"
+                                  ? `${project.name} on ${project.visitShort}`
+                                  : `Visit ${project.visitShort ?? project.name}`
+                              }
                             >
-                              <span className={styles.ctaLiveMarker} aria-hidden="true">
-                                <span className={styles.liveDot} />
-                              </span>
+                              {kind === "live" && (
+                                <span className={styles.ctaLiveMarker} aria-hidden="true">
+                                  <span className={styles.liveDot} />
+                                </span>
+                              )}
                               {project.visitShort ?? "Visit site"}
                             </a>
                           )}

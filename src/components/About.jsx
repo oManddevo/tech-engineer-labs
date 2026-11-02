@@ -12,7 +12,7 @@ const teamNote =
   "Backed by a small team and a network of specialized developers and researchers, allowing us to handle multiple projects, scale to larger engagements, and collaborate with everyone from early-stage startups to established businesses.";
 
 const stats = [
-  { value: "7+", label: "Years Exp." },
+  { value: "10+", label: "Years Exp." },
   { value: "40+", label: "Projects" },
   { value: "AI / Web", label: "Focus" },
   { value: "Whop", label: "Monetization" },
@@ -48,9 +48,9 @@ const About = () => {
         <div className={styles.heroGrid}>
           <div className="about-reveal w-full md:w-1/3 flex flex-col items-center md:items-start">
             <div className={styles.imageWrapper}>
-              <img src="/images/MYPIC.jpg" alt="Tim Stearns" />
+              <img src="/images/ts-emblem.webp" alt="Tim Stearns emblem" />
               <div className={styles.imageCaption}>
-                <div className="flex items-center gap-2 text-sky-300">
+                <div className="mx-auto flex max-w-[60%] flex-col items-center gap-1 text-center text-sky-300">
                   <Terminal size={16} />
                   <span className="text-xs font-mono uppercase tracking-widest">{site.hero.title}</span>
                 </div>

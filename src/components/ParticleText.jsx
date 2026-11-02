@@ -6,6 +6,7 @@ import gsap from "gsap";
 const PARTICLE_COUNT = 12000;
 const MOUSE_RADIUS = 12;
 const MAX_TEXT_WIDTH = 760; // canvas px, about "ENGINEER" at 150px; wider text is shrunk to fit the hero
+const SCREEN_FILL = 0.88; // share of the visible width the text may take on narrow screens
 
 // Evenly spreads `count` points over a sphere (Fibonacci spiral).
 const generateSpherePositions = (count, radius) => {
@@ -21,7 +22,8 @@ const generateSpherePositions = (count, radius) => {
 };
 
 // Samples the pixels of `text` drawn on a canvas; leftover particles are scattered far away.
-const generateTextPositions = (text, count, fontSize = 100) => {
+// Canvas px map to world units at 1/20, shrunk further so the text is at most `maxWorldWidth` wide.
+const generateTextPositions = (text, count, fontSize = 100, maxWorldWidth = Infinity) => {
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
   if (!ctx) return new Float32Array(count * 3);
@@ -31,6 +33,7 @@ const generateTextPositions = (text, count, fontSize = 100) => {
   ctx.font = `bold ${fontSize}px Inter, sans-serif`;
   const fittedSize = Math.min(fontSize, (fontSize * MAX_TEXT_WIDTH) / ctx.measureText(text).width);
   ctx.font = `bold ${fittedSize}px Inter, sans-serif`;
+  const worldScale = Math.min(1 / 20, maxWorldWidth / ctx.measureText(text).width);
   ctx.fillStyle = "white";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
@@ -41,7 +44,7 @@ const generateTextPositions = (text, count, fontSize = 100) => {
   for (let y = 0; y < canvas.height; y += 4) {
     for (let x = 0; x < canvas.width; x += 4) {
       if (data[(y * canvas.width + x) * 4 + 3] > 128) {
-        points.push({ x: (x - canvas.width / 2) / 20, y: -(y - canvas.height / 2) / 20 });
+        points.push({ x: (x - canvas.width / 2) * worldScale, y: -(y - canvas.height / 2) * worldScale });
       }
     }
   }
@@ -72,12 +75,14 @@ const generateTextPositions = (text, count, fontSize = 100) => {
 // and a click sends a shockwave ring through them.
 const ParticleText = ({ text = "VIBEK", isExpanded }) => {
   const pointsRef = useRef(null);
-  const { camera, size } = useThree();
+  const { camera, size, viewport } = useThree();
   const scale = size.width < 768 ? 0.55 : 1;
   const count = PARTICLE_COUNT;
+  // Widest the text may be in the points' own (scaled) units so it stays on screen; rounded to limit re-sampling on resize.
+  const maxTextWidth = Math.round(((viewport.width * SCREEN_FILL) / scale) * 10) / 10;
 
   const spherePositions = useMemo(() => generateSpherePositions(count, 12), []);
-  const textPositions = useMemo(() => generateTextPositions(text, count, 150), [text]);
+  const textPositions = useMemo(() => generateTextPositions(text, count, 150, maxTextWidth), [text, maxTextWidth]);
   const offsets = useRef(new Float32Array(count * 3));
   const colors = useMemo(() => new Float32Array(count * 3).fill(1), [count]);
   const mouse3D = useMemo(() => new THREE.Vector3(10000, 10000, 10000), []);

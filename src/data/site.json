@@ -13,11 +13,11 @@
       "Python & TypeScript"
     ],
     "headline": "AI systems. Scalable products. Real impact.",
-    "subtitle": "11+ years building production web applications with AI integrations. Specializing in Python, React, Next.js, and LLM-powered features."
+    "subtitle": "10+ years building production web applications with AI integrations. Specializing in Python, React, Next.js, and LLM-powered features."
   },
   "summary": [
-    "AI-native Senior Full Stack Engineer with 11+ years building LLM-powered products, HIPAA-compliant healthcare platforms, and high-traffic e-commerce systems at Airbnb, Trinity Health, and Amazon.",
-    "Ships end-to-end features across Python/FastAPI, TypeScript/Node.js, and React/Next.js, with production experience in RAG pipelines, AI agents, HL7 FHIR/EHR integration, PHI security, and AWS/Kubernetes infrastructure. Works at startup speed on 0-to-1 products and uses AI coding tools such as Claude Code daily to deliver faster without trading off reliability."
+    "AI-native Senior Full Stack Engineer with 10+ years building LLM-powered products, HIPAA-compliant healthcare platforms, and high-traffic e-commerce systems.",
+    "Contributed to Airbnb's Reserve Now, Pay Later and AI customer service agent, HealthTap's Virtual Primary Care and Prime, and Amazon's Brand Registry and Project Zero. Works across Python/FastAPI, TypeScript/Node.js, and React/Next.js on AWS, and uses Claude Code daily to deliver faster without trading off reliability."
   ],
   "skills": {
     "lead": "My core stack across AI, full-stack development, Whop monetization, workflow automation, and Android security.",
@@ -263,19 +263,19 @@
     "highlights": [
       {
         "value": "6",
-        "label": "Engineers mentored through 50+ code reviews"
+        "label": "Engineers mentored as a tech lead at Airbnb"
       },
       {
         "value": "3",
-        "label": "Pods led into AI-native development with Claude Code and MCP, raising delivery velocity by 40%"
+        "label": "Pods brought onto Claude Code for 40% faster delivery"
       },
       {
-        "value": "20+",
-        "label": "Hospitals using the platform I built as a founding engineer on a 0-to-1 team"
+        "value": "4",
+        "label": "Identity and payment services led as tech lead behind Airbnb guest checkout"
       },
       {
-        "value": "99.9%",
-        "label": "Uptime kept through architecture RFCs and on-call ownership"
+        "value": "50K+",
+        "label": "Monthly virtual visits on the HealthTap video and chat platform, at 99.9% uptime"
       }
     ],
     "testimonials": []

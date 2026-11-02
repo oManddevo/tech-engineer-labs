@@ -186,6 +186,34 @@
   position: relative;
   overflow: hidden;
 }
+/* Text cover for cards without a screenshot (employer work under NDA). */
+.cardCover {
+  background:
+    radial-gradient(circle at 85% 15%, #38bdf82e 0%, #0000 55%),
+    radial-gradient(circle at 10% 95%, #818cf824 0%, #0000 50%),
+    linear-gradient(160deg, #0f172a 0%, #020617 100%);
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  height: 100%;
+  padding: 2.75rem 1.5rem 1.5rem;
+  display: flex;
+}
+.cardCoverCompany {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+.cardCoverTitle {
+  letter-spacing: -0.03em;
+  color: #f8fafc;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
 .cardImageOverlay {
   z-index: 1;
   pointer-events: none;

@@ -60,7 +60,7 @@ const Loader = () => {
         <div className="ring ring-2" />
         <div className="ring ring-3" />
         {showFinalRing && <div className="ring final-ring" />}
-        <img src="/images/logo.png" alt="Tim Stearns Logo" className="loader-logo" style={{ borderRadius: "50%" }} />
+        <img src="/images/ts-logo.png" alt="Tim Stearns logo" className="loader-logo" style={{ borderRadius: "50%" }} />
       </div>
     </div>
   );

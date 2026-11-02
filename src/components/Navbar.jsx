@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { Menu, X } from "lucide-react";
 import Magnetic from "./Magnetic";
 import { useLoader } from "../context/LoaderContext";
+import { socialLinks } from "../data/contact";
 
 const NAV_STYLE = {
   navbarBlur: "blur(24px)",
@@ -107,7 +108,7 @@ const Navbar = () => {
               className="header-logo relative z-50 text-white font-bold text-xl tracking-tighter cursor-pointer p-2 block mix-blend-difference"
             >
               <span className="text-sky-200">
-                <img src="/images/logo.png" alt="logo" height={80} width={80} style={{ borderRadius: "50%" }} />
+                <img src="/images/ts-logo.png" alt="Tim Stearns logo" height={80} width={80} style={{ borderRadius: "50%" }} />
               </span>
             </a>
           </Magnetic>
@@ -165,6 +166,27 @@ const Navbar = () => {
                 </a>
               </div>
             ))}
+            {/* Social links live here on small screens, where the hero's fixed rail is hidden. */}
+            <div className="overflow-hidden pt-4">
+              <div
+                ref={(el) => {
+                  linksRef.current[navLinks.length] = el;
+                }}
+                className="flex gap-8 opacity-0"
+              >
+                {socialLinks.map(({ label, href, Icon, external }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    className="text-sky-200/80 hover:text-white transition-colors"
+                    {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+                  >
+                    <Icon size={26} />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}

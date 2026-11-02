@@ -87,9 +87,6 @@
   bottom: 0;
   left: 0;
 }
-.imageCaption span {
-  margin-left: 60px;
-}
 .imageWrapper:hover img {
   transform: scale(1.05);
 }
